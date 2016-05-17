@@ -1,0 +1,45 @@
+<div class="admin_home">
+    <table class="table" width="100%">
+       <thead>
+          <tr>
+             <th class="admin_title">title</th>
+             <th class="admin_entity">entity</th>
+             <th class="admin_biblio">biblio</th>
+             <th class="admin_time">time</th>
+             <th class="view_more"></th>
+          </tr>
+       </thead>
+       <tbody>
+           {{#each data.articles}}
+          <tr>
+             <td class="admin_title">{{title}}</td>
+             <td class="admin_entity"><div class="">{{entity}}</div></td>
+             <td class="admin_biblio">{{biblio}}</td>
+             <td class="admin_time">{{time}}</td>
+             <td class="view_more"><a class="view_more_a" href="#">view</td>
+          </tr>
+          {{/each}}
+       </tbody>
+    </table>
+</div>
+
+{{#section 'jquery'}}
+<script>
+    $(function(){
+        $('tr').each(function(index,domEle){
+            var view_more_a = $(domEle).find('.view_more_a');
+            var div = $(domEle).find('div');
+            view_more_a.on('click',function(){
+                if( !div.hasClass('show')){
+                    div.addClass('show');
+                    view_more_a.html('hide');
+                }
+                else {
+                    div.removeClass('show');
+                    view_more_a.html('view');
+                }
+            });
+        });
+    })
+</script>
+{{/section}}

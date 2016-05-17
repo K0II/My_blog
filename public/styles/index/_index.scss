@@ -1,0 +1,49 @@
+@import 'home/home.scss';
+@import 'articles/articles.scss';
+
+#wapper {
+    margin: 0 auto;
+    width: 66%;
+    min-width: 720px;
+    nav {
+        text-align: right;
+        ul {
+            clear: both;
+            li {
+                display: inline-block;
+                margin: 28px 20px;
+                a {
+                    font-size: 16px;
+                    padding: 10px 0;
+                    font-weight: bold;
+                }
+                .active{
+                    border-bottom: 2px solid #fff;
+                }
+            }
+            li#logo {
+                float: left;
+                margin-left: 0;
+                a{
+                    font-size: 28px;
+                }
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    main {
+        text-align: center;
+        padding: 60px 0;
+    }
+    footer {
+        position: fixed;
+        font-size: 14px;
+        font-weight: bold;
+        top: 94%;
+        right: 2%;
+    }
+
+}

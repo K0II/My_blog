@@ -1,0 +1,24 @@
+<div class="admin_home">
+    <table class="table" width="100%">
+       <thead>
+          <tr>
+             <th class="admin_title">title</th>
+             <th class="admin_entity">entity</th>
+             <th class="admin_biblio">biblio</th>
+             <th class="admin_time">time</th>
+             <th class="view_more"></th>
+          </tr>
+       </thead>
+       <tbody>
+           {{#each data.articles}}
+          <tr>
+             <td class="admin_title">{{title}}</td>
+             <td class="admin_entity"><div class="">{{entity}}</div></td>
+             <td class="admin_biblio">{{biblio}}</td>
+             <td class="admin_time">{{time}}</td>
+             <td class="view_more"><a href="/admin/delete/:{{title}}">delete</a></td>
+          </tr>
+          {{/each}}
+       </tbody>
+    </table>
+</div>

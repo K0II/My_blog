@@ -1,0 +1,35 @@
+<!-- 所有的视图都是这个布局 -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" >
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/styles/main.css">
+    {{{_sections.head}}}
+
+  </head>
+  <body>
+
+      <div id="page">
+          <nav>
+              <ul>
+                  <li><a href="/admin">VIEW</a></li>
+                  <li><a href="/admin/create">c</a></li>
+                  <li><a href="/admin/retrieve">r</a></li>
+                  <li><a href="/admin/update">u</a></li>
+                  <li><a href="/admin/delete">d</a></li>
+              </ul>
+          </nav>
+          <main>
+              {{{body}}}
+          </main>
+      </div>
+
+
+    {{{_sections.jquery}}}
+
+</body>
+</html>

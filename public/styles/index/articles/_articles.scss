@@ -1,0 +1,60 @@
+.articles {
+    text-align: left;
+    padding-top: 20px;
+    .bib {
+        display: inline-block;
+        text-align: left;
+        border: 2px solid #fff;
+        margin-bottom: 80px;
+        letter-spacing: -6px;
+        li {
+            letter-spacing: 0;
+            display: inline-block;
+            border-right: 2px solid #fff;
+            a {
+                padding: 2px 21px;
+                font-size: 14px;
+                width: 100%;
+                display: inline-block;
+                &:hover{
+                    background-color: #fff;
+                    color: #333;
+                }
+            }
+            .active{
+                background-color: #fff;
+                color: #333;
+            }
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+    .article {
+        border: 2px solid #fff;
+        margin-bottom: 80px;
+        padding: 20px 20px;
+        h2 {
+            font-size: 16px;
+            padding: 10px 0;
+            border-bottom: 1px solid #fff;
+        }
+        .entity {
+            padding: 20px 0;
+            border-bottom: 1px solid #fff;
+        }
+        .footer {
+            display: block;
+            font-size: 12px;
+            padding-top:10px;
+            text-align: right;
+            .biblio {
+                display: inline-block;
+                padding: 2px 10px;
+                background-color: #222;
+                margin-right: 20px;
+            }
+        }
+    }
+
+}

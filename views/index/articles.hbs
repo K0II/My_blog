@@ -1,0 +1,26 @@
+
+<div class="articles">
+    <ul class="bib">
+        <li><a href="/articles" class="active">All</a></li>
+        <li><a href="/articles/:HTML5">HTML5</a></li>
+        <li><a href="/articles/:CSS3">CSS3</a></li>
+        <li><a href="/articles/:JavaScript">JavaScript</a></li>
+        <li><a href="/articles/:jQuery">jQuery</a></li>
+        <li><a href="/articles/:AJAX">AJAX</a></li>
+        <li><a href="/articles/:Node.js">Node.js</a></li>
+        <li><a href="/articles/:UI Design">UI Design</a></li>
+    </ul>
+
+    {{#each data.articles}}
+    <div class="article">
+        <h2 class="title">{{title}}</h2>
+        <div class="entity">
+            {{entity}}
+        </div>
+        <div class="footer">
+            <span class="biblio">{{biblio}}</span>
+            <time class="time">{{time}}</time>
+        </div>
+    </div>
+    {{/each}}
+</div>
