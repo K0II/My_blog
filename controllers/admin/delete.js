@@ -11,8 +11,7 @@ module.exports = {
         });
     },
     delete_run: function(req,res){
-        var x = req.params.title.substring(1);
-        articles.remove({title: x},function(err,docs){
+        articles.remove({title: req.params.title},function(err,docs){
             if(err) {
                 console.error(err.stack);
             }

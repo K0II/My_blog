@@ -1,0 +1,224 @@
+html,
+body {
+  height: 100%;
+  background-color: #333; }
+
+body {
+  color: #fff;
+  text-align: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  color: #fff;
+  text-decoration: none !important;
+  font-size: 14px; }
+
+p {
+  font-size: 14px; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+input {
+  -webkit-transition: 1s;
+  transition: 1s;
+  color: #fff;
+  border: none; }
+  input:focus {
+    outline: none; }
+
+input::-webkit-input-placeholder {
+  color: #fff; }
+
+input:-moz-placeholder {
+  color: #fff; }
+
+input::-moz-placeholder {
+  color: #fff; }
+
+input:-ms-input-placeholder {
+  color: #fff; }
+
+.home {
+  padding: 80px 0; }
+  .home h1 {
+    font-size: 38px;
+    margin-bottom: 50px; }
+  .home p {
+    font-size: 20px;
+    margin-bottom: 40px; }
+  .home input {
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 4px; }
+
+.articles {
+  text-align: left;
+  padding-top: 20px; }
+  .articles .bib {
+    display: inline-block;
+    text-align: left;
+    border: 2px solid #fff;
+    margin-bottom: 80px;
+    letter-spacing: -6px; }
+    .articles .bib li {
+      letter-spacing: 0;
+      display: inline-block;
+      border-right: 2px solid #fff; }
+      .articles .bib li a {
+        padding: 2px 21px;
+        font-size: 14px;
+        width: 100%;
+        display: inline-block; }
+        .articles .bib li a:hover {
+          background-color: #fff;
+          color: #333; }
+      .articles .bib li .active {
+        background-color: #fff;
+        color: #333; }
+    .articles .bib li:last-child {
+      border-right: none; }
+  .articles .article {
+    border: 2px solid #fff;
+    margin-bottom: 80px;
+    padding: 20px 20px; }
+    .articles .article h2 {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #fff; }
+    .articles .article .entity {
+      padding: 20px 0;
+      border-bottom: 1px solid #fff; }
+    .articles .article .footer {
+      display: block;
+      font-size: 12px;
+      padding-top: 10px;
+      text-align: right; }
+      .articles .article .footer .biblio {
+        display: inline-block;
+        padding: 2px 10px;
+        background-color: #222;
+        margin-right: 20px; }
+
+#wapper {
+  margin: 0 auto;
+  width: 66%;
+  min-width: 720px; }
+  #wapper nav {
+    text-align: right; }
+    #wapper nav ul {
+      clear: both; }
+      #wapper nav ul li {
+        display: inline-block;
+        margin: 28px 20px; }
+        #wapper nav ul li a {
+          font-size: 16px;
+          padding: 10px 0;
+          font-weight: bold; }
+        #wapper nav ul li .active {
+          border-bottom: 2px solid #fff; }
+      #wapper nav ul li#logo {
+        float: left;
+        margin-left: 0; }
+        #wapper nav ul li#logo a {
+          font-size: 28px; }
+      #wapper nav ul li:last-child {
+        margin-right: 0; }
+  #wapper main {
+    text-align: center;
+    padding: 60px 0; }
+  #wapper footer {
+    position: fixed;
+    font-size: 14px;
+    font-weight: bold;
+    top: 94%;
+    right: 2%; }
+
+#page {
+  min-width: 1280px;
+  min-height: 700px;
+  text-align: left;
+  padding-top: 80px; }
+  #page nav {
+    vertical-align: top;
+    width: 160px;
+    display: inline-block;
+    height: 100%;
+    margin-top: 0;
+    padding: 0 30px; }
+    #page nav ul li {
+      margin: 6px 0; }
+      #page nav ul li a {
+        color: #fff;
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        padding: 2px 10px; }
+      #page nav ul li :hover {
+        background-color: #222;
+        text-align: right; }
+  #page main {
+    padding: 10px 20px;
+    display: inline-block;
+    width: 1120px; }
+    #page main .table .admin_title {
+      width: 10%; }
+    #page main .table .admin_entity {
+      width: 70%; }
+      #page main .table .admin_entity div {
+        display: inline-block;
+        width: 100%;
+        max-height: 100px;
+        overflow: hidden; }
+      #page main .table .admin_entity div.show {
+        max-height: 10000px;
+        height: auto; }
+    #page main .table .admin_biblio {
+      width: 5%; }
+    #page main .table .admin_time {
+      width: 5%; }
+    #page main .table .view_more {
+      width: 10%; }
+    #page main .add form {
+      background-color: inherit; }
+      #page main .add form > * {
+        display: block;
+        background-color: inherit;
+        border: 2px solid #fff;
+        margin-bottom: 20px; }
+      #page main .add form input {
+        width: 40%;
+        padding: 4px 20px; }
+      #page main .add form textarea {
+        padding: 10px 20px;
+        width: 100%;
+        height: 300px; }
+      #page main .add form select {
+        width: 20%;
+        padding: 4px 20px; }
+        #page main .add form select option {
+          padding: 2px 20px;
+          border: none; }
+      #page main .add form input[type="submit"] {
+        width: 20%;
+        padding: 4px 20px;
+        margin-top: 40px;
+        background-color: #222; }
+    #page main .admin_retrieve form {
+      margin-bottom: 80px; }
+      #page main .admin_retrieve form input {
+        background-color: #333;
+        border-radius: 4px;
+        border: 1px solid #fff;
+        padding: 4px 12px;
+        margin-right: 30px; }

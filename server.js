@@ -4,10 +4,15 @@ var bodyParser  = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var formidable = require('formidable');
+var morgan = require('morgan');
+var logger = require('express-logger');
+
+// 证书，已添加到 .gitignore
 var credentials = require('./credentials');
 
 var app = express();
 
+// 一些中间件
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser(credentials.cookieSecret));
@@ -17,7 +22,8 @@ app.use(session({
     saveUninitialized: true
 }));
 
-//app.set('view cache', true);
+// Handlebars模版引擎
+app.set('view cache', true);
 var handlebars = require('express3-handlebars').create({
     defaultLayout: 'index',
     extname: ".hbs",
@@ -32,10 +38,20 @@ var handlebars = require('express3-handlebars').create({
 app.engine('hbs',handlebars.engine);
 app.set('view engine','hbs');
 
+// 静态资源目录
 app.use(express.static(__dirname + '/public'));
 
-app.set('port', process.env.PORT || 3000);
+// 设置端口 可以用 PORT=3000 node server.js 覆盖
+app.set('port', process.env.PORT || 8080);
 
+// 开发日志和生产日志
+switch( app.get('env') ) {
+    case 'development' : app.use(morgan('dev')); break;
+    case 'production' : app.use(logger({ path: __dirname + '/log/requests.log' })); break;
+    // 在生产模式下运行程序  NODE_ENV=production node server
+}
+
+// 连接数据库
 mongoose.connect('mongodb://localhost/blog');
 var db = mongoose.connection;
 db.on('error', function(){
@@ -45,6 +61,7 @@ db.once('open', function(){
   console.log('MongoDB connected!')
 });
 
+// 所有路由
 require('./routes.js')(app);
 
 //  ----------------- 添加错误处理程序 -----------------  //

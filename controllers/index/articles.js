@@ -13,7 +13,7 @@ module.exports = {
         });
     },
     articles_run: function(req,res){
-        arts.find({ biblio: req.params.biblio.substring(1) },function(err,doc){
+        arts.find({ biblio: req.params.biblio },function(err,doc){
             if(err){
                 console.error(err.stack);
             }

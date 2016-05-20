@@ -2,12 +2,13 @@ var index_home = require('./controllers/index/home');
 var index_articles = require('./controllers/index/articles');
 var admin_home = require('./controllers/admin/home');
 var admin_create = require('./controllers/admin/create');
-var admin_retrieve = require('./controllers/admin/retrieve');
-var admin_update = require('./controllers/admin/update');
 var admin_delete = require('./controllers/admin/delete');
+var admin_update = require('./controllers/admin/update');
+var admin_retrieve = require('./controllers/admin/retrieve');
 
 module.exports = function(app){
     app.get('/', index_home.home);
+
     app.get('/articles', index_articles.articles);
     app.get('/articles/:biblio',index_articles.articles_run);
 
