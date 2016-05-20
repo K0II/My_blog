@@ -68,7 +68,6 @@ gulp.task('default',['clean'],function(){
 //     .pipe(gulp.dest('dist'));
 // });
 
-
 gulp.task('browser-sync', function () {
    var files = [
       'build/css/*.css',
