@@ -44,9 +44,6 @@ gulp.task('default',['clean'],function(){
 });
 
 // gulp.task('default', function () {
-// 	var templateData = {
-// 		firstName: 'Kaanon'
-// 	},
 // 	options = {
 // 		ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
 // 		// partials : {
