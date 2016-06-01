@@ -8,7 +8,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 var clean = require('gulp-clean');
 var handlebars = require('gulp-compile-handlebars');
-//ee  ff ee
+
 gulp.task('css', function(){
     gulp.src('./public/styles/**/*.scss')
         .pipe(sass())
@@ -28,7 +28,6 @@ gulp.task('js', function(){
         .pipe(gulp.dest('./build/js'));      //  最终发布时更换一下路径
 });
 
-// 不压缩了，太特么慢了
 gulp.task('img', function(){
     gulp.src('./public/images/**/*.*')
         .pipe(gulp.dest('./build/img'));
