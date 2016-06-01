@@ -6,6 +6,7 @@ var session = require('express-session');
 var formidable = require('formidable');
 var morgan = require('morgan');
 var logger = require('express-logger');
+var marked = require('marked');
 
 // 证书，已添加到 .gitignore
 var credentials = require('./credentials');

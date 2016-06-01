@@ -14,7 +14,8 @@
     <div class="article">
         <h2 class="title">{{title}}</h2>
         <div class="entity">
-            {{entity}}
+            <p style="display: none">{{{entity}}}</p>
+            <div style="background-color: #fff; min-height: 100px;color:#000;"></div>
         </div>
         <div class="footer">
             <span class="biblio">{{biblio}}</span>
@@ -23,3 +24,16 @@
     </div>
     {{/each}}
 </div>
+
+
+{{#section 'jquery'}}
+<script>
+
+    $('.entity').each(function(index,domEle){
+        var div = $(domEle).find('div');
+        var p = $(domEle).find('p');
+        div.html(marked(p.html()));
+    })
+
+</script>
+{{/section}}

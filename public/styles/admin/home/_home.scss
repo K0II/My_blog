@@ -1,35 +1,148 @@
-
-    .table {
-        // table-layout:fixed;
-        // display:table;
-        // width: 100%;
-        .admin_title {
-            width: 10%;
-        }
-        .admin_entity {
-            width: 70%;
-            div {
-                display: inline-block;
-                width: 100%;
-                max-height: 100px;
-                overflow: hidden;
-            }
-            div.show{
-                max-height: 10000px;
-                height: auto;
-            }
-            // white-space: nowrap;
-            // text-overflow: ellipsis;
-            // overflow:hidden;
-            // word-wrap:break-word;
-        }
-        .admin_biblio {
-            width: 5%;
-        }
-        .admin_time {
-            width: 5%;
-        }
-        .view_more{
-            width: 10%;
+#form_retrieve {
+    width: 100%;
+    margin-bottom: 80px;
+    letter-spacing: -8px;
+    *{
+        letter-spacing: 0;
+    }
+    font-size: 14px;
+    input {
+        padding: 4px 10px;
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #fff;
+        &:focus{
+            background-color: #fff;
+            color: #000;
         }
     }
+    input[name="title"] {
+        width: 28%;
+        margin-right: 2%;
+    }
+    input[name="entity"] {
+        width: 28%;
+        margin-right: 2%;
+    }
+    input[type="submit"] {
+        margin-right: 0;
+        width: 8%;
+        &:hover{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    .select {
+      width: 30%;
+      margin-right: 2%;
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 16px;
+      padding: 0;
+      position: relative;
+      .select_head {
+        margin-bottom: -2px;
+        width: 100%;
+        label {
+          margin-bottom: 0;
+          width: 100%;
+          padding:0;
+          letter-spacing: -8px;
+          * {
+              letter-spacing: 0;
+          }
+          input {
+            width: 91%;
+            margin-right: 2%;
+            border: 1px solid #fff;
+            display: inline-block;
+            &:focus {
+              outline: none;
+              background-color: #000;
+              color: #fff;
+            }
+          }
+          i {
+            width: 7%;
+            background: none;
+            border:none;
+            border: 1px solid #fff;
+            padding: 7.5px 0;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            vertical-align: top;
+          }
+        }
+      }
+      .select_sub {
+        width: 91%;
+        display: none;
+        border: 1px solid #fff;
+        border-top: none;
+        padding-top: 0;
+        position: absolute;
+        top: 31px;
+        li {
+          font-size: 14px;
+          margin: 2px;
+          padding: 4px 10px;
+          cursor: pointer;
+          background-color: #000;
+          &:first-child {
+            margin-top:2px;
+          }
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+        hr {
+          border: none;
+          height: 1px;
+          background-color: #fff;
+          margin: 0;
+        }
+      }
+    }
+}
+.table {
+    *{
+        font-size: 14px;
+    }
+    .admin_title {
+        width: 20%;
+    }
+    .admin_entity {
+        width: 65%;
+        div {
+            display: inline-block;
+            width: 100%;
+            max-height: 20px;
+            overflow: hidden;
+        }
+        div.show{
+            max-height: 10000px;
+            height: auto;
+        }
+        // white-space: nowrap;
+        // text-overflow: ellipsis;
+        // overflow:hidden;
+        // word-wrap:break-word;
+    }
+    .admin_biblio {
+        width: 3%;
+    }
+    .admin_time {
+        width: 3%;
+    }
+    .update{
+        width: 3%;
+    }
+    .delete{
+        width: 3%;
+    }
+    .view_more{
+        width: 3%;
+    }
+}
