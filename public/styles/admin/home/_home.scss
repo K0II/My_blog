@@ -4,33 +4,26 @@
     letter-spacing: -8px;
     *{
         letter-spacing: 0;
+        color: #BEBEC0;
     }
     font-size: 14px;
     input {
-        padding: 4px 10px;
+        padding: 10px 10px;
         background-color: #000;
-        color: #fff;
-        border: 1px solid #fff;
-        &:focus{
-            background-color: #fff;
-            color: #000;
-        }
+        color: #BEBEC0;
+        border: 1px solid #242424;
     }
     input[name="title"] {
-        width: 28%;
-        margin-right: 2%;
+        width: 30%;
+        border-right: none;
     }
     input[name="entity"] {
-        width: 28%;
-        margin-right: 2%;
+        width: 30%;
+        border-right: none;
     }
     input[type="submit"] {
         margin-right: 0;
         width: 8%;
-        &:hover{
-            background-color: #fff;
-            color: #000;
-        }
     }
     .select {
       width: 30%;
@@ -53,21 +46,16 @@
           }
           input {
             width: 91%;
-            margin-right: 2%;
-            border: 1px solid #fff;
+            border: 1px solid #242424;
+            border-right: none;
             display: inline-block;
-            &:focus {
-              outline: none;
-              background-color: #000;
-              color: #fff;
-            }
           }
           i {
-            width: 7%;
+            width: 9%;
             background: none;
-            border:none;
-            border: 1px solid #fff;
-            padding: 7.5px 0;
+            color: #BEBEC0;
+            border: 1px solid #242424;
+            padding: 13.5px 0;
             text-align: center;
             display: inline-block;
             cursor: pointer;
@@ -76,31 +64,27 @@
         }
       }
       .select_sub {
-        width: 91%;
+        width: 91.4%;
         display: none;
-        border: 1px solid #fff;
+        border: 1px solid #242424;
         border-top: none;
         padding-top: 0;
         position: absolute;
-        top: 31px;
+        top: 42px;
         li {
+            color: #BEBEC0;
           font-size: 14px;
-          margin: 2px;
-          padding: 4px 10px;
+          padding: 10px 10px;
           cursor: pointer;
           background-color: #000;
           &:first-child {
             margin-top:2px;
           }
-          &:hover {
-            background-color: #fff;
-            color: #000;
-          }
         }
         hr {
           border: none;
           height: 1px;
-          background-color: #fff;
+          background-color: #242424;
           margin: 0;
         }
       }

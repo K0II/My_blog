@@ -1,11 +1,11 @@
 <div class="admin_home">
     <form id="form_retrieve" action="/admin/home" method="post">
-        <input type="text" name="title" value="" placeholder="title">
-        <input type="text" name="entity" value="" placeholder="entity">
+        <input type="text" name="title" value="" placeholder="TITLE">
+        <input type="text" name="entity" value="" placeholder="ENTITY">
         <div class="select">
           <div class="select_head">
               <label>
-                <input class="select_show" type="text" name="biblio" value="" placeholder="biblio" readonly>
+                <input class="select_show" type="text" name="biblio" value="" placeholder="BIBLIO" readonly>
                 <i class="fa fa-angle-down select_button"></i>
               </label>
           </div>
@@ -19,7 +19,7 @@
               <li>UI Design</li>
           </ul>
         </div>
-        <input type="submit" value="Search">
+        <input type="submit" value="SEARCH">
     </form>
     <table class="table" width="100%">
        <thead>
@@ -37,10 +37,12 @@
            {{#each data.articles}}
           <tr>
              <td class="admin_title">{{title}}</td>
-             <td class="admin_entity"><div class="entity">
-                 <p style="display: none">{{{entity}}}</p>
-                 <div style="background-color: #fff; min-height: 100px;color:#000;"></div>
-             </div></td>
+             <td class="admin_entity">
+                 <div class="entity">
+                     <p style="display: none">{{{entity}}}</p>
+                     <div style="background-color: #000; min-height: 100px;color:#fff;"></div>
+                 </div>
+             </td>
              <td class="admin_biblio">{{biblio}}</td>
              <td class="admin_time">{{time}}</td>
              <td class="update"><a class="update_a" href="javascript:;">update</a></td>

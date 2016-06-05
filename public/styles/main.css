@@ -61,21 +61,18 @@ input:-ms-input-placeholder {
 
 .home {
   padding: 80px 0;
+  text-align: left;
 }
 .home h1 {
-  font-size: 38px;
+  background-color: #151519;
+  color: #00FFFF;
+  padding: 1px 12px;
+  font-size: 58px;
+  margin-right: 20px;
+  font-weight: lighter;
+  text-align: left;
+  display: inline-block;
   margin-bottom: 50px;
-}
-.home p {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-.home input {
-  padding: 10px 40px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  border-radius: 4px;
 }
 
 .articles {
@@ -85,14 +82,14 @@ input:-ms-input-placeholder {
 .articles .bib {
   display: inline-block;
   text-align: left;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   margin-bottom: 80px;
   letter-spacing: -6px;
 }
 .articles .bib li {
   letter-spacing: 0;
   display: inline-block;
-  border-right: 2px solid #fff;
+  border-right: 1px solid #fff;
 }
 .articles .bib li a {
   padding: 2px 21px;
@@ -112,21 +109,29 @@ input:-ms-input-placeholder {
   border-right: none;
 }
 .articles .article {
-  border: 2px solid #fff;
+  border: 2px solid #666;
   margin-bottom: 80px;
   padding: 20px 20px;
 }
 .articles .article h2 {
   font-size: 16px;
   padding: 10px 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #666;
 }
 .articles .article .entity {
   padding: 20px 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #666;
 }
 .articles .article .entity div {
-  color: #000;
+  padding: 20px 30px;
+  background-color: #111;
+  color: #fff;
+}
+.articles .article .entity div h1 {
+  color: #fff;
+}
+.articles .article .entity div code {
+  color: #00FFFF;
 }
 .articles .article .footer {
   display: block;
@@ -159,6 +164,7 @@ input:-ms-input-placeholder {
 #wapper nav ul li a {
   font-size: 16px;
   padding: 10px 0;
+  color: #919195;
   font-weight: bold;
 }
 #wapper nav ul li .active {
@@ -170,6 +176,7 @@ input:-ms-input-placeholder {
 }
 #wapper nav ul li#logo a {
   font-size: 28px;
+  color: #919195;
 }
 #wapper nav ul li:last-child {
   margin-right: 0;
@@ -194,7 +201,7 @@ input:-ms-input-placeholder {
 }
 #page nav {
   vertical-align: top;
-  width: 160px;
+  width: 140px;
   display: inline-block;
   height: 100%;
   margin-top: 0;
@@ -223,32 +230,25 @@ input:-ms-input-placeholder {
 }
 #page main #form_retrieve * {
   letter-spacing: 0;
+  color: #BEBEC0;
 }
 #page main #form_retrieve input {
-  padding: 4px 10px;
+  padding: 10px 10px;
   background-color: #000;
-  color: #fff;
-  border: 1px solid #fff;
-}
-#page main #form_retrieve input:focus {
-  background-color: #fff;
-  color: #000;
+  color: #BEBEC0;
+  border: 1px solid #242424;
 }
 #page main #form_retrieve input[name="title"] {
-  width: 28%;
-  margin-right: 2%;
+  width: 30%;
+  border-right: none;
 }
 #page main #form_retrieve input[name="entity"] {
-  width: 28%;
-  margin-right: 2%;
+  width: 30%;
+  border-right: none;
 }
 #page main #form_retrieve input[type="submit"] {
   margin-right: 0;
   width: 8%;
-}
-#page main #form_retrieve input[type="submit"]:hover {
-  background-color: #fff;
-  color: #000;
 }
 #page main #form_retrieve .select {
   width: 30%;
@@ -274,53 +274,44 @@ input:-ms-input-placeholder {
 }
 #page main #form_retrieve .select .select_head label input {
   width: 91%;
-  margin-right: 2%;
-  border: 1px solid #fff;
+  border: 1px solid #242424;
+  border-right: none;
   display: inline-block;
 }
-#page main #form_retrieve .select .select_head label input:focus {
-  outline: none;
-  background-color: #000;
-  color: #fff;
-}
 #page main #form_retrieve .select .select_head label i {
-  width: 7%;
+  width: 9%;
   background: none;
-  border: none;
-  border: 1px solid #fff;
-  padding: 7.5px 0;
+  color: #BEBEC0;
+  border: 1px solid #242424;
+  padding: 13.5px 0;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   vertical-align: top;
 }
 #page main #form_retrieve .select .select_sub {
-  width: 91%;
+  width: 91.4%;
   display: none;
-  border: 1px solid #fff;
+  border: 1px solid #242424;
   border-top: none;
   padding-top: 0;
   position: absolute;
-  top: 31px;
+  top: 42px;
 }
 #page main #form_retrieve .select .select_sub li {
+  color: #BEBEC0;
   font-size: 14px;
-  margin: 2px;
-  padding: 4px 10px;
+  padding: 10px 10px;
   cursor: pointer;
   background-color: #000;
 }
 #page main #form_retrieve .select .select_sub li:first-child {
   margin-top: 2px;
 }
-#page main #form_retrieve .select .select_sub li:hover {
-  background-color: #fff;
-  color: #000;
-}
 #page main #form_retrieve .select .select_sub hr {
   border: none;
   height: 1px;
-  background-color: #fff;
+  background-color: #242424;
   margin: 0;
 }
 #page main .table * {
@@ -360,24 +351,32 @@ input:-ms-input-placeholder {
 #page main .add #form_create {
   background-color: inherit;
   font-size: 16px;
+  letter-spacing: -8px;
 }
 #page main .add #form_create > * {
   display: block;
   background-color: inherit;
-  border: 1px solid #fff;
-  margin-bottom: 20px;
+  border: 1px solid #242424;
+  margin-bottom: 40px;
+  letter-spacing: 0px;
 }
 #page main .add #form_create input {
-  width: 49%;
-  margin-bottom: 30px;
-  padding: 6px 20px;
+  color: #BEBEC0;
+  width: 50%;
+  border-right: none;
+  display: inline-block;
+  padding: 8px 20px;
 }
 #page main .add #form_create #editor {
   background-color: #000;
+  letter-spacing: -8px;
+}
+#page main .add #form_create #editor > * {
+  letter-spacing: 0px;
 }
 #page main .add #form_create #editor textarea, #page main .add #form_create #editor div {
   display: inline-block;
-  width: 49%;
+  width: 50%;
   height: 100%;
   vertical-align: top;
   padding: 0 20px;
@@ -387,8 +386,8 @@ input:-ms-input-placeholder {
 }
 #page main .add #form_create #editor textarea {
   border: none;
-  width: 49%;
-  border-right: 1px solid #ccc;
+  width: 50%;
+  border-right: 1px solid #242424;
   min-height: 480px;
   outline: none;
   font-size: 14px;
@@ -401,12 +400,8 @@ input:-ms-input-placeholder {
 #page main .add #form_create .select {
   background-color: #000;
   border: none;
-  width: 30%;
-  margin-right: 2%;
+  width: 50%;
   display: inline-block;
-  vertical-align: top;
-  margin-bottom: 0;
-  padding: 0;
   position: relative;
 }
 #page main .add #form_create .select .select_head {
@@ -423,66 +418,56 @@ input:-ms-input-placeholder {
   letter-spacing: 0;
 }
 #page main .add #form_create .select .select_head label input {
-  width: 91%;
-  margin-right: 2%;
-  border: 1px solid #fff;
+  width: 93%;
+  border: 1px solid #242424;
+  border-right: none;
   display: inline-block;
   background-color: #000;
-  padding: 4px 20px;
-  color: #fff;
-}
-#page main .add #form_create .select .select_head label input:focus {
-  outline: none;
-  background-color: #000;
-  color: #fff;
+  padding: 8px 20px;
+  color: #BEBEC0;
 }
 #page main .add #form_create .select .select_head label i {
   width: 7%;
   background: none;
   border: none;
-  border: 1px solid #fff;
-  padding: 7.5px 0;
+  color: #242424;
+  border: 1px solid #242424;
+  padding: 12px 0;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   vertical-align: top;
 }
 #page main .add #form_create .select .select_sub {
-  width: 91%;
+  width: 93.1%;
   display: none;
-  border: 1px solid #fff;
+  border: 1px solid #242424;
   border-top: none;
   padding-top: 2px;
   position: absolute;
-  top: 32px;
+  top: 40px;
 }
 #page main .add #form_create .select .select_sub li {
   font-size: 14px;
-  margin: 2px;
-  padding: 4px 10px;
+  color: #BEBEC0;
+  padding: 10px 20px;
   cursor: pointer;
   background-color: #000;
 }
 #page main .add #form_create .select .select_sub li:first-child {
   margin-top: 2px;
 }
-#page main .add #form_create .select .select_sub li:hover {
-  background-color: #fff;
-  color: #000;
-}
 #page main .add #form_create .select .select_sub hr {
   border: none;
   height: 1px;
-  background-color: #fff;
+  background-color: #242424;
   margin: 0;
 }
 #page main .add #form_create input[type="submit"] {
-  width: 20%;
-  padding: 4px 20px;
+  width: 100%;
+  padding: 10px 20px;
   margin-top: 0;
+  color: #BEBEC0;
   background-color: #000;
-}
-#page main .add #form_create input[type="submit"]:hover {
-  background-color: #fff;
-  color: #000;
+  border: 1px solid #242424;
 }
